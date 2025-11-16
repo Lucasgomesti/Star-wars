@@ -26,7 +26,7 @@ async function loadCharacters (url){
         responseJson.results.forEach((character) => { // forEach irá para fazer um loop em todas as propriedades do objeto Json  
             const card = document.createElement ("div") // Isso ira criar um elemento tag HTML: ex div, h2 e outros          
             card.style.backgroundImage = 
-            `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
+            `url('./assets/${character.url.replace(/\D/g, "")}.jpg')`
             card.className = "cards"
 
             const characterNameBg = document.createElement ("div")
@@ -48,7 +48,7 @@ async function loadCharacters (url){
                 
                 const characterImage = document.createElement("div")
                 characterImage.style.backgroundImage =
-                `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
+                `url('./assets/${character.url.replace(/\D/g, "")}.jpg')`
                 characterImage.className = "character-image"
 
                 const name = document.createElement("span")
